@@ -1,13 +1,11 @@
 import re
-from typing import Any, Dict, List, Optional, Sequence, Tuple, Union
+from typing import Union
 
-import langchain
-from langchain import LLMChain
 from langchain.agents.agent import AgentOutputParser
+from langchain.chains import LLMChain
 from langchain.schema import AgentAction, AgentFinish, OutputParserException
 
-from .prompts import (FINAL_ANSWER_ACTION, FORMAT_INSTRUCTIONS,
-                      QUESTION_PROMPT, SUFFIX)
+from .prompts import (FINAL_ANSWER_ACTION, FORMAT_INSTRUCTIONS)
 
 
 class ChatZeroShotOutputParser(AgentOutputParser):
